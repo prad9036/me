@@ -18,20 +18,10 @@ CAPT is a command-line tool that allows you to install software from Debian (`.d
 
 ## Installation
 
-1.  Clone the repository or download the `capt` script.
-2.  Navigate into the project directory:
+You can install CAPT directly with a single command:
     ```bash
-    cd capt_project
+    curl -fsSL https://raw.githubusercontent.com/prad9036/me/refs/heads/main/install.sh | bash
     ```
-3.  Run the installer script:
-    ```bash
-    ./install.sh
-    ```
-4.  Reload your shell configuration as instructed:
-    ```bash
-    source ~/.bashrc
-    ```
-
 ## Usage
 
 ### Installing a Package
