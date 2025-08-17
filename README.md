@@ -22,6 +22,7 @@ You can install CAPT directly with a single command:
     ```bash
     curl -fsSL https://raw.githubusercontent.com/prad9036/me/refs/heads/main/install.sh | bash
     ```
+
 ## Usage
 
 ### Installing a Package
