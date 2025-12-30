@@ -56,7 +56,7 @@ start_cloudflared() {
                             -H "Content-Type: application/json" \
                             -H "X-Admin-Key: ${LB_ADMIN_KEY}" \
                             -d "{\"urls\":[\"$URL\"]}" \
-                            http://localhost:8080/add_cdn
+                            https://fcdn.koyeb.app/add_cdn
                         do
                             sleep 2  # retry if server is down
                         done
