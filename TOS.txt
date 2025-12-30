@@ -1,0 +1,9 @@
+This bot is developed solely to help users generate public sharing links for files they personally own or have permission to share. Users are entirely responsible for the content they upload, link, or distribute using this service.
+
+It is strictly prohibited to upload, generate links for, or distribute any copyrighted, illegal, or harmful materials - including but not limited to pirated content, malware, or any form of explicit or child sexual abuse material. The developer or maintainer of this bot does not host, store, or monitor any files shared using this platform.
+
+In case of any copyright infringement, illegal activity, or violation of applicable laws, the user who shared or uploaded the file will be held solely responsible. The developer or maintainer of this bot will not be liable for any content shared or actions taken by users. Any legal claims or cases arising from such misuse will be directed exclusively toward the responsible user.
+
+Upon receiving a valid complaint or legal notice, the developer will cooperate with authorities and take appropriate action, including link or file removal when necessary.
+
+By using this bot, you agree to comply with all copyright and data protection laws, and to refrain from using it for any unlawful purpose. Misuse of this service for piracy or illegal distribution of any kind is strictly prohibited.
