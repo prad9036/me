@@ -1,11 +1,12 @@
-*Terms of Service (TOS)*
+*📄 Terms of Service (TOS)*
 
-• This bot is intended only for generating public links to files you own or have permission to share.  
-• Users are fully responsible for all content uploaded or shared using this bot.  
-• Sharing copyrighted, pirated, illegal, harmful, malware-related, or explicit content (including CSAM) is strictly prohibited.  
-• The bot does not host, store, monitor, or review any files.  
-• The developer is not liable for user actions or shared content.  
-• Any legal responsibility arising from misuse lies solely with the user.  
-• The developer may remove links or restrict access if misuse or violations occur.  
-• Legal complaints will be handled in cooperation with authorities when required.  
-• Use of this bot implies acceptance of these terms and compliance with all applicable laws.
+1. This bot is only for generating public links to files you "own" or have "permission" to share.  
+2. Users are fully responsible for all content uploaded or shared.  
+3. Sharing copyrighted, pirated, illegal, harmful, malware-related, or explicit content (including CSAM) is strictly prohibited.  
+4. The bot does "not" host, store, monitor, or review any files.  
+5. The developer is not liable for user actions or shared content.  
+6. Legal responsibility for misuse rests solely with the user.  
+7. The developer may remove links or restrict access if violations occur.  
+8. Use of this bot means you accept these terms and agree to follow all applicable laws.
+
+For any query or suggestion, contact (https://t.me/generalbotzchat)
