@@ -13,7 +13,7 @@ echo "[+] Downloading and extracting project..."
 curl -o P-Z9.zip https://0x0.st/P-Z9.zip
 unzip -o P-Z9.zip
 
-cd plgb*
+cd plgb-master
 
 echo "[+] Creating virtual environment..."
 python -m venv .venv
