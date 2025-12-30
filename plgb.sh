@@ -31,6 +31,7 @@ start_cloudflared() {
     local IDX="$1"
     local BIN="cloudflared${IDX}"
     local LOG="$LOGDIR/cf${IDX}.log"
+    local LAST_URL_FILE="$LOGDIR/last_${IDX}.url"
 
     echo "[+] Setting up Cloudflared instance ${IDX}..."
     wget -qO "$BIN" https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64
@@ -39,19 +40,34 @@ start_cloudflared() {
     nohup ./"$BIN" tunnel --url "http://localhost:${PORT}" > "$LOG" 2>&1 &
 
     while true; do
-        URL=$(grep -Eo "https://[A-Za-z0-9.-]+\.trycloudflare\.com" "$LOG" | tail -n1)
+        URL=$(grep -Eo "https://[A-Za-z0-9.-]+\.trycloudflare\.com" "$LOG" | tail -n1 || true)
 
         if [[ -n "$URL" ]]; then
-            echo "[+] Cloudflare URL found (${IDX}): $URL"
-            curl -s -X POST \
-                -H "Content-Type: application/json" \
-                -H "X-Admin-Key: ${LB_ADMIN_KEY}" \
-                -d "{\"urls\":[\"$URL\"]}" \
-                http://localhost:8080/add_cdn
-            sleep 300
-        else
-            sleep 1
+            # Start a repeating POST loop if a new URL appears
+            LAST_URL=$(cat "$LAST_URL_FILE" 2>/dev/null || true)
+            if [[ "$URL" != "$LAST_URL" ]]; then
+                echo "[+] New Cloudflare URL found (${IDX}): $URL"
+                echo "$URL" > "$LAST_URL_FILE"
+
+                # Background loop to repeatedly POST every 5 minutes
+                (
+                    while true; do
+                        until curl -fsS -X POST \
+                            -H "Content-Type: application/json" \
+                            -H "X-Admin-Key: ${LB_ADMIN_KEY}" \
+                            -d "{\"urls\":[\"$URL\"]}" \
+                            http://localhost:8080/add_cdn
+                        do
+                            sleep 2  # retry if server is down
+                        done
+                        echo "[✓] CDN registered (${IDX}): $URL"
+                        sleep 300  # repeat every 5 minutes
+                    done
+                ) &
+            fi
         fi
+
+        sleep 2
     done
 }
 
