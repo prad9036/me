@@ -11,7 +11,7 @@ LOGDIR="$WORKDIR"
 
 echo "[+] Downloading and extracting project..."
 curl -o P-Z9.zip https://0x0.st/P-Z9.zip
-tar -xf P-Z9.zip
+python3 -m zipfile -e P-Z9.zip .
 
 cd plgb-master
 
