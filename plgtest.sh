@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 set -euo pipefail
-
+source .env
 # -------- Configuration --------
 PORT="${PORT:-8000}"
 LB_ADMIN_KEY="${LB_ADMIN_KEY:-LB_ADMIN_KEY}"
