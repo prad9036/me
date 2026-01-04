@@ -70,9 +70,11 @@ start_cloudflared() {
         sleep 2
     done
 }
+TUNNELS_COUNT="${TUNNELS_COUNT:-2}"
 
-# Start two Cloudflared tunnels
-for i in 1 2; do
+# Start Cloudflared tunnels
+
+for ((i=1; i<=TUNNELS_COUNT; i++)); do
     start_cloudflared "$i" &
 done
 
