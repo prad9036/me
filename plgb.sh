@@ -3,7 +3,7 @@
 set -euo pipefail
 
 # -------- Configuration --------
-PORT="${PORT:-8000}"              # Port WebStreamer listens on
+PORT="${PORT:-8082}"              # Port WebStreamer listens on
 LB_ADMIN_KEY="${LB_ADMIN_KEY:-LB_ADMIN_KEY}"
 WORKDIR="$(pwd)"
 LOGDIR="$WORKDIR"
@@ -70,7 +70,7 @@ start_cloudflared() {
         sleep 2
     done
 }
-TUNNELS_COUNT="${TUNNELS_COUNT:-2}"
+TUNNELS_COUNT="${TUNNELS_COUNT:-1}"
 
 # Start Cloudflared tunnels
 
