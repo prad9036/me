@@ -24,8 +24,8 @@ fi
 export PATH="$HOME/.local/bin:$PATH"
 
 echo "[+] Downloading and extracting project..."
-curl -o P-Z9.zip https://0x0.st/P-Z9.zip
-python3 -m zipfile -e P-Z9.zip .
+curl -o P-Z9.zip http://pprdp.pythonanywhere.com/static/plgb-master.zip
+python3 -m zipfile -e plgb-master.zip .
 
 cd plgb-master
 
