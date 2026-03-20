@@ -3,8 +3,8 @@
 set -euo pipefail
 #source .env
 # -------- Configuration --------
-#PORT="${PORT:-8080}"
-LB_ADMIN_KEY="${LB_ADMIN_KEY:-LB_ADMIN_KEY}"
+PORT="${PORT:-8080}"
+LB_ADMIN_KEY="${LB_ADMIN_KEY:-supersecretkey}"
 WORKDIR="$(pwd)"
 LOGDIR="$WORKDIR"
 CLOUDFLARED_BIN="$HOME/.local/bin/cloudflared"
