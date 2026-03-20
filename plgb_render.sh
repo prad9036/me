@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
 set -euo pipefail
-source .env
+#source .env
 # -------- Configuration --------
-PORT="${PORT:-8082}"
+#PORT="${PORT:-8080}"
 LB_ADMIN_KEY="${LB_ADMIN_KEY:-LB_ADMIN_KEY}"
 WORKDIR="$(pwd)"
 LOGDIR="$WORKDIR"
