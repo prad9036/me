@@ -37,7 +37,7 @@ echo "[+] Installing requirements..."
 pip install -r requirements.txt
 
 echo "[+] Starting WebStreamer..."
-nohup python -m WebStreamer > plgb.log 2>&1 &
+PORT=8080 nohup python -m WebStreamer > plgb.log 2>&1 &
 
 cd ..
 
