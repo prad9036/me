@@ -30,14 +30,14 @@ python3 -m zipfile -e plgb-master.zip .
 cd plgb-master
 
 echo "[+] Creating virtual environment..."
-python -m venv .venv
+python3 -m venv .venv
 source .venv/bin/activate
 
 echo "[+] Installing requirements..."
 pip install -r requirements.txt
 
 echo "[+] Starting WebStreamer..."
-PORT=8080 nohup python -m WebStreamer > plgb.log 2>&1 &
+PORT=8080 nohup python3 -m WebStreamer > plgb.log 2>&1 &
 
 cd ..
 
